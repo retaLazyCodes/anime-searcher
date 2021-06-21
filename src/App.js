@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header'
+import HomePage from './pages/Home'
+import SearchResults from './pages/SearchResults'
+import Detail from './pages/Detail'
+import StaticContext from './context/StaticContext'
+import { AnimesContextProvider } from './context/AnimesContext'
+import './App.css'
+
+import { Link, Route, Switch } from "wouter";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	return (
+		<StaticContext.Provider value={{}}>
+			<div className="App">
+				<section className="App-content">
+					<Header />
+					<Link to="/">
+						<figure className="App-logo">
+							<img alt="anime logo" src="/ani-logo.png" width="20%" />
+						</figure>
+					</Link>
+					<Switch>
+						<AnimesContextProvider>
+							<Route
+								component={HomePage}
+								path="/" />
+							<Route
+								component={SearchResults}
+								path="/search/:keyword"
+							/>
+							<Route
+								component={Detail}
+								path="/anime/:id" />
+						</AnimesContextProvider>
+					</Switch>
+				</section>
+			</div>
+		</StaticContext.Provider>
+	);
 }
 
 export default App;
