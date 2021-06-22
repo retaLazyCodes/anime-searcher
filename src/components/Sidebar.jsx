@@ -11,7 +11,7 @@ function Sidebar({ topAnime }) {
 							<a
 								href={anime.url}
 								target="_blank"
-
+								style={{ color: 'inherit' }}
 								rel="noreferrer">
 								{anime.title}
 							</a>

@@ -1,19 +1,10 @@
 :root {
-  --results-columns: 2;
+  --results-columns: 4;
 }
 
 .ListOfAnimes {
   column-count: var(--results-columns);
   column-gap: .5em;
-}
-
-.ListOfAnimes-item {
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  background-color: #eee;
-  display: inline-block;
-  width: 100%;
 }
 
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import AnimeCard from '../../components/AnimeCard'
 import useGlobalAnimes from '../../hooks/useGlobalAnimes'
 
