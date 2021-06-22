@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
+import { Link } from 'wouter'
 import AnimeCard from '../../components/AnimeCard'
 import useGlobalAnimes from '../../hooks/useGlobalAnimes'
 
@@ -11,6 +13,10 @@ export default function Detail({ params }) {
         <>
             <h1>Anime con id {params.id}</h1>
             <AnimeCard {...selectedAnime} />
+            <Button className="my-btn">
+                <Link to={`/`}>GO BACK</Link>
+            </Button>{' '}
+
         </>
     )
 }

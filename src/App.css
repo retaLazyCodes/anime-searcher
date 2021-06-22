@@ -68,20 +68,25 @@
   }
 }
 
-/* .btn {
+.my-btn {
   border: 1px solid transparent;
   padding: .5rem 1rem;
-  background-color: var(--brand-color_3);
-  color: var(--theme-body-txt);
+  background-color: #EC84B6;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
+  border-radius: 8%;
 }
 
-.btn[disabled] {
+.my-btn[disabled] {
   opacity: .3;
   pointer-events: none;
 }
 
-.btn:hover {
-  background-color: var(--brand-color_6);
-} */
+.my-btn:hover {
+  background-color: grey;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
